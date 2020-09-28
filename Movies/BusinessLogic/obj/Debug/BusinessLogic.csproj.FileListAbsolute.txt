@@ -1,2 +1,0 @@
-C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
-C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache

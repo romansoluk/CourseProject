@@ -1,3 +1,0 @@
-C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\ConsoleTester\obj\Debug\ConsoleTester.csproj.CoreCompileInputs.cache
-C:\Users\master\Desktop\lnu\ShipperProject\Movies\ConsoleTester\obj\Debug\ConsoleTester.csprojAssemblyReference.cache
-C:\Users\master\Desktop\lnu\ShipperProject\Movies\ConsoleTester\obj\Debug\ConsoleTester.csproj.CoreCompileInputs.cache
