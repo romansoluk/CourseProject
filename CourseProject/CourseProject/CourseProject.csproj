@@ -93,6 +93,10 @@
       <Project>{2d67372d-92f8-440a-aec6-56c4dbe4e106}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConsoleProject\ConsoleProject.csproj">
+      <Project>{19fc35e5-300c-4bae-b3cb-ac47238ec383}</Project>
+      <Name>ConsoleProject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CourseProjectMVC\CourseProjectMVC.csproj">
       <Project>{a73c78d2-63c8-4426-becb-df5b9fe621b3}</Project>
       <Name>CourseProjectMVC</Name>

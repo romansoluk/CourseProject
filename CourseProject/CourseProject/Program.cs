@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ConsoleProject;
 
 namespace CourseProject
 {
@@ -20,12 +20,26 @@ namespace CourseProject
         {
 
 
+
+
+
             //OldCode();
-            //NewBL();
-           // NewCode();
-            OrderCode();
+           NewBL();
+            // NewCode();
+            //OrderCode();
+           // ConsoleOperations();
         }
 
+
+
+        private static void ConsoleOperations()
+        {
+           /* ConsoleProgram log = new ConsoleProgram(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
+            Console.WriteLine(log.Login());
+            Console.ReadLine();*/
+
+           
+        }
 
         private static void OrderCode()
         {
@@ -50,6 +64,9 @@ namespace CourseProject
 
 
             IShipperDAL dal = new ShipperDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
+
+
+
 
             //OrderDTO m = new OrderDTO();
 
@@ -113,15 +130,21 @@ namespace CourseProject
 
 
             Item manager = new Item(dal);
-            ItemDTO m = new ItemDTO
-            {
-                Name = "Dark brown fake leather belt",
-                Price = (float)700.00,
-                OnStock = 175
-            };
-            m = manager.AddItem(m);
+            ItemDTO item = new ItemDTO();
+            manager.AddItem(item);
+
+            //manager.ShowItems();
+
+            //ItemDTO m = new ItemDTO
+            //{
+            //    Name = "Dark brown fake leather belt",
+            //    Price = (float)700.00,
+            //    OnStock = 175
+            //};
+            //m = manager.AddItem(m);
 
             Console.WriteLine("DONE");
+            Console.ReadLine();
         }
 
 
