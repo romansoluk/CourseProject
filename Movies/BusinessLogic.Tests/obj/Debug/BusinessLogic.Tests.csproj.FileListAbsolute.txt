@@ -1,0 +1,30 @@
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\nunit.engine.dll
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\nunit.engine.api.dll
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\nunit.engine.core.dll
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\BusinessLogic.Tests.dll
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\BusinessLogic.Tests.pdb
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\nunit.framework.dll
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\nunit.framework.pdb
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\bin\Debug\nunit.framework.xml
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.csprojAssemblyReference.cache
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.csproj.CoreCompileInputs.cache
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.csproj.CopyComplete
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.dll
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\nunit.engine.dll
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\nunit.engine.api.dll
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\nunit.engine.core.dll
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\BusinessLogic.Tests.dll
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\BusinessLogic.Tests.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\nunit.framework.dll
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\nunit.framework.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\bin\Debug\nunit.framework.xml
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.csprojAssemblyReference.cache
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.csproj.CoreCompileInputs.cache
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.csproj.CopyComplete
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.dll
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.pdb

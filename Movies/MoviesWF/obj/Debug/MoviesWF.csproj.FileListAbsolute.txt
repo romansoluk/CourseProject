@@ -1,0 +1,17 @@
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\bin\Debug\MoviesWF.exe.config
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\bin\Debug\MoviesWF.exe
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\bin\Debug\MoviesWF.pdb
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\obj\Debug\MoviesWF.Properties.Resources.resources
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\obj\Debug\MoviesWF.csproj.GenerateResource.cache
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\obj\Debug\MoviesWF.csproj.CoreCompileInputs.cache
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\obj\Debug\MoviesWF.exe
+C:\Users\master\Desktop\lnu\Солук Роман(курсовий проект)\Movies\MoviesWF\obj\Debug\MoviesWF.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\bin\Debug\MoviesWF.exe.config
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\bin\Debug\MoviesWF.exe
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\bin\Debug\MoviesWF.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\obj\Debug\MoviesWF.csprojAssemblyReference.cache
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\obj\Debug\MoviesWF.Properties.Resources.resources
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\obj\Debug\MoviesWF.csproj.GenerateResource.cache
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\obj\Debug\MoviesWF.csproj.CoreCompileInputs.cache
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\obj\Debug\MoviesWF.exe
+C:\Users\master\Desktop\lnu\ShipperProject\Movies\MoviesWF\obj\Debug\MoviesWF.pdb

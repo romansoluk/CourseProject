@@ -1,0 +1,11 @@
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\b\CourseProjectMVC\bin\NUnit3.TestAdapter.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\b\CourseProjectMVC\bin\NUnit3.TestAdapter.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\b\CourseProjectMVC\bin\nunit.engine.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\b\CourseProjectMVC\bin\nunit.engine.api.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\b\CourseProjectMVC\bin\nunit.engine.core.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\b\CourseProjectMVC\bin\CourseProjectMVC.dll.config
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\b\CourseProjectMVC\bin\CourseProjectMVC.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\CourseProjectMVC\Debug\CourseProjectMVC.csprojAssemblyReference.cache
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\CourseProjectMVC\Debug\CourseProjectMVC.csproj.CoreCompileInputs.cache
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\CourseProjectMVC\Debug\CourseProjectMVC.csproj.CopyComplete
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\CourseProjectMVC\Debug\CourseProjectMVC.dll
