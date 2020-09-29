@@ -54,3 +54,5 @@ C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic\bin\Debug
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic\bin\Debug\System.Security.AccessControl.xml
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic\bin\Debug\System.Security.Permissions.xml
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic\bin\Debug\ConsoleProject.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic\bin\Debug\ConsoleProject.pdb

@@ -51,3 +51,5 @@ C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\CourseProjectWF\bin\Deb
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\CourseProjectWF\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\CourseProjectWF\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\CourseProjectWF\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\CourseProjectWF\bin\Debug\ConsoleProject.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\CourseProjectWF\bin\Debug\ConsoleProject.pdb

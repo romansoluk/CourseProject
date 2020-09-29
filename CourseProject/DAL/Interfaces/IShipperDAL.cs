@@ -9,9 +9,11 @@ namespace DAL.Interfaces
 {
     public interface IShipperDAL
     {
-        ShipperDTO GetShipper(ShipperDTO shipper);
-        void Login(); 
-        ShipperDTO GetShipperById(int ShipperID);
+       
         ShipperDTO CreateShipper(ShipperDTO shipper);
+        ShipperDTO GetShipperById(int ShipperID);
+        ShipperDTO UpdateShipper(ShipperDTO shipper);
+        void DeleteShipper(int ShipperID);
+
     }
 }

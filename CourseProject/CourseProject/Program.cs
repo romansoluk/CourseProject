@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleProject;
+using System.Windows.Forms;
 
 namespace CourseProject
 {
@@ -20,14 +21,16 @@ namespace CourseProject
         {
 
 
+            ConsoleLogic console = new ConsoleLogic(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
 
-
-
+            console.Menu();
+            //Console.WriteLine(console.Menu());
             //OldCode();
-           NewBL();
+            //NewBL();
             // NewCode();
             //OrderCode();
-           // ConsoleOperations();
+            // ConsoleOperations();
+            Console.ReadLine();
         }
 
 
@@ -126,12 +129,12 @@ namespace CourseProject
         private static void NewBL()
         {
             string connStr = ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString;
-            ItemDAL dal = new ItemDAL(connStr);
+            ShipperDAL dal = new ShipperDAL(connStr);
 
 
-            Item manager = new Item(dal);
-            ItemDTO item = new ItemDTO();
-            manager.AddItem(item);
+            Shipper manager = new Shipper(dal);
+            ShipperDTO item = new ShipperDTO();
+            manager.AddShipper(item);
 
             //manager.ShowItems();
 

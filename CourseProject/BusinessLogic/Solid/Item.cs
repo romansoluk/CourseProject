@@ -27,7 +27,6 @@ namespace BusinessLogic.Solid
 
         public ItemDTO AddItem(ItemDTO item)
             {
-            // ItemDAL dal = new ItemDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
 
             item = new ItemDTO
             {
@@ -41,6 +40,20 @@ namespace BusinessLogic.Solid
             return _itemDAL.CreateItem(item);
             }
 
+
+        public void RemoveItem(int ItemID)
+        {
+            ItemDTO item = new ItemDTO();
+            item.ItemID = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Deleting item ID: {item.ItemID}");
+             _itemDAL.DeleteItem(item.ItemID);
+        }
+
+        public ItemDTO GetItem(int ItemID)
+        {
+            return _itemDAL.GetItemById(ItemID);
+        }
+
         public void ShowItems()
         {
             Console.WriteLine("ItemID\tName\t\tPrice\tOnStock");
@@ -51,6 +64,33 @@ namespace BusinessLogic.Solid
 
             }
         }
+
+        public void ShowItemsSorted(int SortParameter)
+        {
+            Console.WriteLine("Enter number to get items sorted \n 1-Price Ascending \n 2-Price Descending \n 3-Newer to Older \n Anything else for older first");
+            Console.WriteLine("ItemID\tName\t\tPrice\tOnStock");
+            foreach (var item in _itemDAL.GetAllItemsSorted(SortParameter))
+            {
+                Console.WriteLine($"{item.ItemID}\t{item.Name}\t{item.Price}\t{item.OnStock}");
+                
+            }
+        }
+
+        public ItemDTO ChangeItem(ItemDTO item)
+        {
+            Console.WriteLine("ItemID, new Price, left OnStock");
+            item = new ItemDTO
+            {
+                ItemID = Convert.ToInt32(Console.ReadLine()),
+                Price = Convert.ToDouble(Console.ReadLine()),
+                OnStock = Convert.ToInt32(Console.ReadLine())
+            };
+
+
+            return _itemDAL.UpdateItem(item);
+        }
+
+
 
     }
 }

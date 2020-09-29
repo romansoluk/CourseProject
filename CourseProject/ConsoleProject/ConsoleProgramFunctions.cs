@@ -10,23 +10,19 @@ using DTO;
 
 namespace ConsoleProject
 {
-    public class ConsoleProgram
+    public class ConsoleProgramFunctions
     {
 
         private string connectionString;
 
-        public ConsoleProgram(string connectionString)
+        public ConsoleProgramFunctions(string connectionString)
         {
             this.connectionString = connectionString;
         }
 
 
-        public bool SignUp()
-        {
-            return true;
-        }
 
-        public bool Login()
+        public int Login()
         {
 
             Console.WriteLine("Login to continue:\n");
@@ -50,17 +46,21 @@ namespace ConsoleProject
                  SqlDataReader reader = comm.ExecuteReader();
                  while(reader.Read())
                 {
+                    shipper.ShipperID = Convert.ToInt32(reader["ShipperID"]);
                     shipper.Login = reader["Login"].ToString();
                     shipper.Password = (byte[])reader["Password"];
                     if(shipper.Login!=login || decrypt.PasswordDecryption(shipper.Password)!=password)
                     {
-                        return false;
+
+                        throw new NotImplementedException("Incorrect Login or Password");
                     }
                 }
+                     return shipper.ShipperID;
 
             }
 
-            return true;
+
+           // return true;
         }
 
     }

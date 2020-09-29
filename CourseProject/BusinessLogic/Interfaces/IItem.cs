@@ -12,10 +12,11 @@ namespace BusinessLogic.Interfaces
     public interface IItem
     {
         ItemDTO AddItem(ItemDTO item);
-        //ItemDTO AddItem(ItemDTO item);
-        //MovieDTO AddMovie(MovieDTO movie);
-
+        ItemDTO ChangeItem(ItemDTO item);
+        void ShowItemsSorted(int SortingParameter);
         void ShowItems();
+        void RemoveItem(int ItemID);
+        ItemDTO GetItem(int ItemID);
     }
 }
 
