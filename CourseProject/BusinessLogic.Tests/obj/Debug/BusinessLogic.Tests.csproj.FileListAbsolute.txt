@@ -41,3 +41,4 @@ C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic.Tests\bin
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic.Tests\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic.Tests\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic.Tests\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\BusinessLogic.Tests\obj\Debug\BusinessLogic.Tests.csprojAssemblyReference.cache

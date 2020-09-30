@@ -156,6 +156,9 @@ namespace DAL.Concrete
 
         public OrderDTO PackOrder(int OrderID) //Update Order
         {
+
+            double price = 0;
+            int stock = 0;
             AddToOrderDTO orderitem = new AddToOrderDTO();
             ItemDTO item = new ItemDTO();
             OrderDTO order = new OrderDTO();
@@ -167,11 +170,11 @@ namespace DAL.Concrete
             using (SqlCommand comm = conn.CreateCommand())
             {
                 comm.CommandText = "select * from AddToOrder where OrderIDKEY=@OrderIDKEY";
-                comm.Parameters.AddWithValue("@OrderIDKey", orderitem.OrderIDKEY);
+                comm.Parameters.AddWithValue("@OrderIDKey", OrderID);
                 conn.Open();
                 SqlDataReader reader = comm.ExecuteReader();
                 List<AddToOrderDTO> orderitems = new List<AddToOrderDTO>();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     orderitems.Add(new AddToOrderDTO
                     {
@@ -181,34 +184,67 @@ namespace DAL.Concrete
                     });
                 }
 
-                
-                    for(int i=0; i<orderitems.Count; i++)
+
+                for (int i = 0; i < orderitems.Count; i++)
+                {
+                    if (orderitems[i].Amount > dal.GetItemById(orderitems[i].ItemIDKEY).OnStock)
                     {
-                        if(orderitems[i].Amount>dal.GetItemById(orderitems[i].ItemIDKEY).OnStock)
-                        {
                         break;
-                        }
-                        else
+                    }
+                    else
+                    {
+                        stock = dal.GetItemById(orderitems[i].ItemIDKEY).OnStock - orderitems[i].Amount;
+                        price = dal1.GetOrderById(orderitems[i].OrderIDKEY).Price + orderitems[i].Amount * dal.GetItemById(orderitems[i].ItemIDKEY).Price;
+                        item = new ItemDTO
                         {
-                            dal.GetItemById(orderitems[i].ItemIDKEY).OnStock = dal.GetItemById(orderitems[i].ItemIDKEY).OnStock - orderitems[i].Amount;
-                            dal1.GetOrderById(orderitems[i].OrderIDKEY).Price = dal1.GetOrderById(orderitems[i].OrderIDKEY).Price + orderitems[i].Amount * dal.GetItemById(orderitems[i].ItemIDKEY).Price;
-                        }
-                        
+                            ItemID = dal.GetItemById(orderitems[i].ItemIDKEY).ItemID,
+                            Name = dal.GetItemById(orderitems[i].ItemIDKEY).Name,
+                            Price = dal.GetItemById(orderitems[i].ItemIDKEY).Price,
+                            OnStock = stock
+                        };
+                        dal.UpdateItem(item);
                     }
 
-
-                    while(reader.Read())
-                {order=new OrderDTO
-                {
-
                 }
 
-                }
-                
-
+             
             }
 
-            return order;
+
+
+             OrderDAL dal2 = new OrderDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
+
+            order = new OrderDTO
+            {
+                OrderID=OrderID,
+                Price = price,
+                Comment="Completed"
+            };
+
+
+
+                using (SqlConnection conn1 = new SqlConnection(this.connectionString))
+                using (SqlCommand comm1 = conn1.CreateCommand())
+                {
+                    comm1.CommandText = "update [Order] set Price= @Price, Comment=@Comment where OrderID = @OrderID";
+                    comm1.Parameters.Clear();
+                    comm1.Parameters.AddWithValue("@OrderID", order.OrderID);
+                    //comm.Parameters.AddWithValue("@Name", item.Name);
+                    comm1.Parameters.AddWithValue("@Price", order.Price);
+                    comm1.Parameters.AddWithValue("@Comment", order.Comment);
+                    conn1.Open();
+
+                    order.OrderID = Convert.ToInt32(comm1.ExecuteScalar());
+
+
+                }
+            //}
+                
+                    return order;
+
+            
+
+           // return order;
         }
 
     }

@@ -14,7 +14,7 @@ namespace DAL.Interfaces
         OrderDTO UpdateOrder(OrderDTO order);
         void DeleteOrder(int OrderID);
         List<OrderDTO> GetAllOrdersSorted(int n);
-        bool PackOrder(int OrderID);
+        OrderDTO PackOrder(int OrderID);
         //OrderDTO PackOrder(OrderDTO order);
 
     }

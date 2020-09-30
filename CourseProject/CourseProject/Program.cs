@@ -23,11 +23,11 @@ namespace CourseProject
 
             ConsoleLogic console = new ConsoleLogic(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
 
-            console.Menu();
+            //console.Menu();
             //Console.WriteLine(console.Menu());
             //OldCode();
             //NewBL();
-            // NewCode();
+             NewCode();
             //OrderCode();
             // ConsoleOperations();
             Console.ReadLine();
@@ -167,7 +167,7 @@ namespace CourseProject
             //Console.WriteLine(dal.GetOrderById(1).CustomerIDKEY /*+ '\n' + dal.GetOrderById(1).CustomerIDKEY + '\n' + dal.GetOrderById(1).ShipperIDKEY + '\n'*/);
             // Console.WriteLine(dal.GetOrderById(1).Date);
 
-           ItemDAL dal = new ItemDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
+           //ItemDAL dal = new ItemDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
 
             /*ItemDTO m = new ItemDTO
             {
@@ -179,8 +179,12 @@ namespace CourseProject
             dal.UpdateItem(m);*/
 
 
+            OrderDAL dal = new OrderDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
+
+            OrderDTO m = new OrderDTO();
 
 
+            m = dal.PackOrder(6);
 
 
 
@@ -191,14 +195,14 @@ namespace CourseProject
 
             //Console.WriteLine(dal.GetItemById(1).Name);
 
-            ItemDTO m = new ItemDTO
-             {
-                 Name = "Grey Pants",
-                 Price = 1590.00,
-                 OnStock = 50
-             };
-             m = dal.CreateItem(m);
-             Console.WriteLine($"New item ID: {m.ItemID}");
+            //ItemDTO m = new ItemDTO
+            // {
+            //     Name = "Grey Pants",
+            //     Price = 1590.00,
+            //     OnStock = 50
+            // };
+            // m = dal.CreateItem(m);
+            // Console.WriteLine($"New item ID: {m.ItemID}");
              
 
 
