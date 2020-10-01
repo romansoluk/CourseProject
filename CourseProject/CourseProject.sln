@@ -18,6 +18,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseProjectMVC", "CourseProjectMVC\CourseProjectMVC.csproj", "{A73C78D2-63C8-4426-BECB-DF5B9FE621B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{874490D1-A60C-46FE-8241-346D9C18381A}"
+	ProjectSection(SolutionItems) = preProject
+		CourseProject\App.config = CourseProject\App.config
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.Tests", "DAL.Tests\DAL.Tests.csproj", "{E7C65829-44B9-408D-8B89-A752F9D6069B}"
 EndProject

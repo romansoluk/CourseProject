@@ -9,10 +9,11 @@ namespace DAL.Interfaces
 {
     public interface ICustomerDAL
     {
-        List<CustomerDTO> GetAllCustomers(CustomerDTO customer);
+        void DeleteCustomer(int CustomerID);
+        List<CustomerDTO> GetAllCustomers();
         CustomerDTO GetCustomerById(int CustomerID);
-        CustomerDTO GetCustomersWithOrders();
         CustomerDTO CreateCustomer(CustomerDTO customer);
+        CustomerDTO UpdateCustomer(CustomerDTO customer);
 
     }
 }

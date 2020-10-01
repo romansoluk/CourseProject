@@ -17,7 +17,7 @@ namespace BusinessLogic.Solid
     {
       
         private readonly IItemDAL _itemDAL;
-        //private readonly ItemDTO dal;
+        
            
 
       public Item(IItemDAL itemDAL)
@@ -27,7 +27,7 @@ namespace BusinessLogic.Solid
 
         public ItemDTO AddItem(ItemDTO item)
             {
-
+            Console.WriteLine("Enter NEW ITEM DETAILS (NAME, PRICE, ON STOCK");
             item = new ItemDTO
             {
                 Name = Console.ReadLine(),
@@ -43,6 +43,7 @@ namespace BusinessLogic.Solid
 
         public void RemoveItem(int ItemID)
         {
+            Console.WriteLine("ENTER ITEM ID TO DELETE:");
             ItemDTO item = new ItemDTO();
             item.ItemID = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Deleting item ID: {item.ItemID}");
@@ -56,11 +57,11 @@ namespace BusinessLogic.Solid
 
         public void ShowItems()
         {
+            Console.WriteLine("LIST OF ALL ITEMS ON STOCK:\n");
             Console.WriteLine("ItemID\tName\t\tPrice\tOnStock");
             foreach (var item in _itemDAL.GetAllItems())
             {
                 Console.WriteLine($"{item.ItemID}\t{item.Name}\t{item.Price}\t{item.OnStock}");
-                //Console.WriteLine($"{item.OnStock}");
 
             }
         }
@@ -78,6 +79,7 @@ namespace BusinessLogic.Solid
 
         public ItemDTO ChangeItem(ItemDTO item)
         {
+            Console.WriteLine("CHANGE ITEM DETAILS:\n");
             Console.WriteLine("ItemID, new Price, left OnStock");
             item = new ItemDTO
             {

@@ -9,13 +9,13 @@ namespace DAL.Interfaces
 {
     public interface IOrderDAL
     {
+        OrderDTO CreateOrder(OrderDTO order);
         OrderDTO GetOrderById(int OrderID);
         List<OrderDTO> GetAllOrders();
-        OrderDTO UpdateOrder(OrderDTO order);
         void DeleteOrder(int OrderID);
         List<OrderDTO> GetAllOrdersSorted(int n);
         OrderDTO PackOrder(int OrderID);
-        //OrderDTO PackOrder(OrderDTO order);
+    
 
     }
 }

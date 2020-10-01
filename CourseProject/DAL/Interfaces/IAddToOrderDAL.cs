@@ -9,6 +9,8 @@ namespace DAL.Interfaces
 {
     public interface IAddToOrderDAL
     {
-        AddToOrderDTO AddToOrder(AddToOrderDTO addtoorder);
+        AddToOrderDTO CreateAddToOrder(AddToOrderDTO addtoorder);
+        void DeleteAddToOrder(int OrderIDKEY); 
+        List<AddToOrderDTO> FromSameOrder(int OrderIDKEY); 
     }
 }

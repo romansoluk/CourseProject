@@ -21,12 +21,31 @@ namespace DAL.Concrete
         }
 
 
+        public OrderDTO CreateOrder(OrderDTO order)
+        {
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                comm.CommandText = "insert into [Order] (CustomerIDKEY, ShipperIDKEY, Price, Date, Comment) output INSERTED.OrderID values (@CustomerIDKEY, @ShipperIDKEY, @Price, @Date, @Comment)";
+                comm.Parameters.Clear();
+                comm.Parameters.AddWithValue("@CustomerIDKEY", order.CustomerIDKEY);
+                comm.Parameters.AddWithValue("@ShipperIDKEY", order.ShipperIDKEY);
+                comm.Parameters.AddWithValue("@Price", order.Price);
+                comm.Parameters.AddWithValue("@Date", order.Date);
+                comm.Parameters.AddWithValue("@Comment", order.Comment);
+                conn.Open();
+
+                order.OrderID = Convert.ToInt32(comm.ExecuteScalar());
+                return order;
+            }
+        }
+
         public void DeleteOrder(int OrderID)
         {
             using (SqlConnection conn = new SqlConnection(this.connectionString))
             using (SqlCommand comm = conn.CreateCommand())
             {
-                comm.CommandText = "delete from Order where OrderID = @OrderID";
+                comm.CommandText = "delete from AddToOrder where OrderIDKEY=@OrderID delete from [Order] where OrderID = @OrderID";
                 comm.Parameters.Clear();
                 comm.Parameters.AddWithValue("@OrderID", OrderID);
                 conn.Open();
@@ -47,7 +66,7 @@ namespace DAL.Concrete
                 OrderDTO order = new OrderDTO();
 
                 comm.CommandText = "select * from [Order] where OrderID=@OrderID";
-                //comm.Parameters.Clear();
+               
                 comm.Parameters.AddWithValue("@OrderID", OrderID);
                 SqlDataReader reader = comm.ExecuteReader();
 
@@ -69,10 +88,6 @@ namespace DAL.Concrete
             }
         }
 
-        public OrderDTO UpdateOrder(OrderDTO order)
-        {
-            throw new NotImplementedException();
-        }
 
 
         public List<OrderDTO> GetAllOrders()
@@ -130,8 +145,7 @@ namespace DAL.Concrete
 
 
 
-                //comm.CommandText = "order by [Name] ASC";
-
+                
                 conn.Open();
                 SqlDataReader reader = comm.ExecuteReader();
 
@@ -154,7 +168,8 @@ namespace DAL.Concrete
             }
         }
 
-        public OrderDTO PackOrder(int OrderID) //Update Order
+        //Update Order: Completes Order and marks it as COMPLETED
+        public OrderDTO PackOrder(int OrderID) 
         {
 
             double price = 0;
@@ -229,7 +244,6 @@ namespace DAL.Concrete
                     comm1.CommandText = "update [Order] set Price= @Price, Comment=@Comment where OrderID = @OrderID";
                     comm1.Parameters.Clear();
                     comm1.Parameters.AddWithValue("@OrderID", order.OrderID);
-                    //comm.Parameters.AddWithValue("@Name", item.Name);
                     comm1.Parameters.AddWithValue("@Price", order.Price);
                     comm1.Parameters.AddWithValue("@Comment", order.Comment);
                     conn1.Open();
@@ -238,13 +252,13 @@ namespace DAL.Concrete
 
 
                 }
-            //}
+           
                 
                     return order;
 
             
 
-           // return order;
+           
         }
 
     }

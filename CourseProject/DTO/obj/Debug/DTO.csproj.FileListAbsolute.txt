@@ -41,3 +41,4 @@ C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\DTO\bin\Debug\pt-BR\Mic
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\DTO\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\DTO\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\DTO\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

@@ -14,7 +14,7 @@ namespace BusinessLogic.Solid
     public class Shipper : IShipper
     {
         private readonly IShipperDAL _shipperDAL;
-        //private readonly ItemDTO dal;
+      
 
 
         public Shipper(IShipperDAL shipperDAL)
@@ -24,10 +24,7 @@ namespace BusinessLogic.Solid
 
         public ShipperDTO AddShipper(ShipperDTO shipper)
         {
-           // IShipperDAL dal = new ShipperDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
-
-
-            //string encrypted; // = Console.ReadLine();
+           
             ConsoleProject.PasswordActions password = new ConsoleProject.PasswordActions();
 
 
@@ -62,6 +59,7 @@ namespace BusinessLogic.Solid
 
         public ShipperDTO ChangeShipper(ShipperDTO shipper)
         {
+           
             Console.WriteLine("ShipperID, new EMail, Address, Phone, Description");
             shipper = new ShipperDTO
             {

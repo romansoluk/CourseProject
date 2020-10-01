@@ -18,7 +18,7 @@ namespace DAL.Concrete
             this.connectionString = connectionString;
         }
 
-        public List<CustomerDTO> GetAllCustomers(CustomerDTO customer)
+        public List<CustomerDTO> GetAllCustomers()
         {
             throw new NotImplementedException();
         }
@@ -26,14 +26,66 @@ namespace DAL.Concrete
 
         public CustomerDTO GetCustomerById(int CustomerID)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                conn.Open();
+                CustomerDTO customer = new CustomerDTO();
+
+                comm.CommandText = $"select * from Customer where CustomerID=@CustomerID";
+                comm.Parameters.AddWithValue("@CustomerID", CustomerID);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    customer = new CustomerDTO
+                    {
+                        CustomerID = Convert.ToInt32(reader["CustomerID"]),
+                        EMail = reader["EMail"].ToString(),
+                        Addres = reader["Adress"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Description = reader["Description"].ToString(),
+                    };
+                }
+
+                return customer;
+            }
         }
 
-
-       
-        public CustomerDTO GetCustomersWithOrders()
+        public void DeleteCustomer(int CustomerID)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                comm.CommandText = "delete from Customer where CustomerID = @CustomerID";
+                comm.Parameters.Clear();
+                comm.Parameters.AddWithValue("@CustomerID", CustomerID);
+                conn.Open();
+
+                comm.ExecuteNonQuery();
+            }
+        }
+       
+        public CustomerDTO UpdateCustomer(CustomerDTO customer)
+        {
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                comm.CommandText = "update Customer set EMail= @EMail, Adress=@Adress, Phone=@Phone, Description=@Description where CustomerID = @CustomerID";
+                comm.Parameters.Clear();
+                comm.Parameters.AddWithValue("@CustomerID", customer.CustomerID);
+                comm.Parameters.AddWithValue("@EMail", customer.EMail);
+                comm.Parameters.AddWithValue("@Adress", customer.Addres);
+                comm.Parameters.AddWithValue("@Phone", customer.Phone);
+                comm.Parameters.AddWithValue("@Description", customer.Description);
+                conn.Open();
+
+                customer.CustomerID = Convert.ToInt32(comm.ExecuteScalar());
+
+
+                return customer;
+            }
         }
 
 
