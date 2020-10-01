@@ -43,9 +43,9 @@ namespace BusinessLogic.Solid
 
         public void RemoveItem(int ItemID)
         {
-            Console.WriteLine("ENTER ITEM ID TO DELETE:");
+            //Console.WriteLine("ENTER ITEM ID TO DELETE:");
             ItemDTO item = new ItemDTO();
-            item.ItemID = Convert.ToInt32(Console.ReadLine());
+            //item.ItemID = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Deleting item ID: {item.ItemID}");
              _itemDAL.DeleteItem(item.ItemID);
         }

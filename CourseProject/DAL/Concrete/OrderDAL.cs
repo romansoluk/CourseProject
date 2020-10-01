@@ -90,12 +90,13 @@ namespace DAL.Concrete
 
 
 
-        public List<OrderDTO> GetAllOrders()
+        public List<OrderDTO> GetAllOrders(int ShipperIDKEY)
         {
             using (SqlConnection conn = new SqlConnection(this.connectionString))
             using (SqlCommand comm = conn.CreateCommand())
             {
-                comm.CommandText = "select * from Order";
+                comm.CommandText = "select * from [Order] where ShipperIDKEY=@ShipperIDKEY";
+                comm.Parameters.AddWithValue("@ShipperIDKEY", ShipperIDKEY);
                 conn.Open();
                 SqlDataReader reader = comm.ExecuteReader();
 
@@ -118,7 +119,7 @@ namespace DAL.Concrete
             }
         }
 
-        public List<OrderDTO> GetAllOrdersSorted(int SortParameter)
+        public List<OrderDTO> GetAllOrdersSorted(int SortParameter, int ShipperIDKEY)
         {
             using (SqlConnection conn = new SqlConnection(this.connectionString))
             using (SqlCommand comm = conn.CreateCommand())
@@ -128,18 +129,23 @@ namespace DAL.Concrete
 
                 if (SortParameter == 1)
                 {
-                    comm.CommandText = "select * from Order order by Date ASC";
+                    comm.CommandText = "select * from [Order] where ShipperIDKEY=@ShipperIDKEY order by Date ASC";
+                    comm.Parameters.AddWithValue("@ShipperIDKEY", ShipperIDKEY);
                 }
                 if (SortParameter == 2)
                 {
-                    comm.CommandText = "select * from Order order by Date DESC";
-
+                    comm.CommandText = "select * from [Order] where ShipperIDKEY=@ShipperIDKEY order by Date DESC";
+                    comm.Parameters.AddWithValue("@ShipperIDKEY", ShipperIDKEY);
                 }
                 if (SortParameter == 3)
-                { comm.CommandText = "select * from Order order by Price DESC"; }
+                { comm.CommandText = "select * from [Order] where ShipperIDKEY=@ShipperIDKEY order by Price DESC";
+                    comm.Parameters.AddWithValue("@ShipperIDKEY", ShipperIDKEY);
+                }
 
                 else
-                { comm.CommandText = "select * from Item"; }
+                { comm.CommandText = "select * from [Order] where ShipperIDKEY=@ShipperIDKEY";
+                    comm.Parameters.AddWithValue("@ShipperIDKEY", ShipperIDKEY);
+                }
 
 
 
@@ -261,5 +267,8 @@ namespace DAL.Concrete
            
         }
 
+       
+        }
+
     }
-}
+

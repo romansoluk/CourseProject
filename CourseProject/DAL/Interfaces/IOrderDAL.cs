@@ -11,11 +11,11 @@ namespace DAL.Interfaces
     {
         OrderDTO CreateOrder(OrderDTO order);
         OrderDTO GetOrderById(int OrderID);
-        List<OrderDTO> GetAllOrders();
+        List<OrderDTO> GetAllOrders(int ShipperIDKEY);
         void DeleteOrder(int OrderID);
-        List<OrderDTO> GetAllOrdersSorted(int n);
+        List<OrderDTO> GetAllOrdersSorted(int n, int ShipperIDKEY);
         OrderDTO PackOrder(int OrderID);
-    
+        
 
     }
 }

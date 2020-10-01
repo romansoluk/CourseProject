@@ -21,13 +21,14 @@ namespace CourseProject
         {
 
 
-            ConsoleLogic console = new ConsoleLogic(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
-
-            //console.Menu();
+            Menu console = new Menu(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
+            ConsoleProgramFunctions Login = new ConsoleProgramFunctions(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
+            int user = Login.Login();
+            console.MENU(user);
             //Console.WriteLine(console.Menu());
             //OldCode();
             //NewBL();
-             NewCode();
+             //NewCode();
             //OrderCode();
             // ConsoleOperations();
             Console.ReadLine();

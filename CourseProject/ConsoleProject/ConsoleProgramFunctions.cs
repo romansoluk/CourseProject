@@ -36,7 +36,7 @@ namespace ConsoleProject
             using (SqlCommand comm = conn.CreateCommand())
             {
                 conn.Open();
-                //ShipperDTO shipper = new ShipperDTO();
+               
 
                 comm.CommandText = $"select * from Shipper where Login= '{login}'";
 
@@ -60,7 +60,7 @@ namespace ConsoleProject
             }
 
 
-           // return true;
+           
         }
 
     }

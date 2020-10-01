@@ -113,9 +113,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleProject\ConsoleProject.csproj">
+    <ProjectReference Include="..\ConsoleProject\ConsoleProject%28MENU%29.csproj">
       <Project>{19fc35e5-300c-4bae-b3cb-ac47238ec383}</Project>
-      <Name>ConsoleProject</Name>
+      <Name>ConsoleProject%28MENU%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{d65a451c-4bdd-4d61-9b6d-6d6722d95e42}</Project>

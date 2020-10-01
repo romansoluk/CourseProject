@@ -14,5 +14,7 @@ namespace BusinessLogic.Interfaces
         OrderDTO GetOrder(int OrderID);
         OrderDTO CompleteOrder(int OrderID);
         void DeleteOrder(int OrderID);
+        void ShowOrders(int ShipperIDKEY);
+        void ShowOrdersSorted(int SortParameter, int ShipperIDKEY);
     }
 }

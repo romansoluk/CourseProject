@@ -1,0 +1,14 @@
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\nunit.engine.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\nunit.engine.api.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\nunit.engine.core.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\ConsoleProject.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\ConsoleProject.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\DTO.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\bin\Debug\DTO.pdb
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\obj\Debug\ConsoleProject(MENU).csprojAssemblyReference.cache
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\obj\Debug\ConsoleProject(MENU).csproj.CoreCompileInputs.cache
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\obj\Debug\ConsoleProject(MENU).csproj.CopyComplete
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\obj\Debug\ConsoleProject.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\ConsoleProject\obj\Debug\ConsoleProject.pdb

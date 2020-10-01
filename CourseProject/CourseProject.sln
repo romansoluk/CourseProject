@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseProject", "CourseProject\CourseProject.csproj", "{19C2C02D-49C2-4FC8-B043-761EA4178AAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAIN MENU", "CourseProject\MAIN MENU.csproj", "{19C2C02D-49C2-4FC8-B043-761EA4178AAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{2D67372D-92F8-440A-AEC6-56C4DBE4E106}"
 EndProject
@@ -26,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.Tests", "DAL.Tests\DAL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.Tests", "BusinessLogic.Tests\BusinessLogic.Tests.csproj", "{FA765A8A-D250-4891-944E-2245B979116A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleProject", "ConsoleProject\ConsoleProject.csproj", "{19FC35E5-300C-4BAE-B3CB-AC47238EC383}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleProject(MENU)", "ConsoleProject\ConsoleProject(MENU).csproj", "{19FC35E5-300C-4BAE-B3CB-AC47238EC383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

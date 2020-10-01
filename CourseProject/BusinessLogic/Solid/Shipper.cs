@@ -27,12 +27,12 @@ namespace BusinessLogic.Solid
            
             ConsoleProject.PasswordActions password = new ConsoleProject.PasswordActions();
 
-
+           
             Console.WriteLine("Login, Password, Email, Address, Phone, Descrition: ");
             shipper = new ShipperDTO
           {
           Login = Console.ReadLine(),
-          Password = password.PasswordEncryption(/*encrypted=*/Console.ReadLine()),
+          Password = password.PasswordEncryption(Console.ReadLine()),
           EMail = Console.ReadLine(),
           Addres = Console.ReadLine(),
           Phone = Console.ReadLine(),
@@ -53,7 +53,7 @@ namespace BusinessLogic.Solid
 
         public ShipperDTO GetShipper(int ShipperID)
         {
-            ShipperID = Convert.ToInt32(Console.ReadLine());
+           // ShipperID = Convert.ToInt32(Console.ReadLine());
             return _shipperDAL.GetShipperById(ShipperID);
         }
 

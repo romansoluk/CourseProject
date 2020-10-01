@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Solid
 {
-    class AddToOrder : IAddToOrder
+    public class AddToOrder : IAddToOrder
     {
         private readonly IAddToOrderDAL _addtoorderDAL;
 

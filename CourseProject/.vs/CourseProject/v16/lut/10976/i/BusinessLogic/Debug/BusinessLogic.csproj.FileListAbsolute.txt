@@ -7,3 +7,4 @@ C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\l
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\BusinessLogic\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\BusinessLogic\Debug\BusinessLogic.csproj.CopyComplete
 C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\BusinessLogic\Debug\BusinessLogic.dll
+C:\Users\master\Desktop\lnu\ShipperProject\CourseProject\.vs\CourseProject\v16\lut\0\i\BusinessLogic\Debug\BusinessLogic.csprojAssemblyReference.cache

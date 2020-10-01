@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Solid
 {
-    class Order
+    public class Order
     {
         private readonly IOrderDAL _orderDAL;
       
@@ -59,6 +59,29 @@ namespace BusinessLogic.Solid
         {
             Console.WriteLine("ENTER ORDER ID TO COMPLETE:");
             return _orderDAL.PackOrder(OrderID);
+        }
+
+
+        public void ShowOrders(int ShipperIDKEY)
+        {
+            Console.WriteLine("LIST OF ALL YOUR ORDERS:\n");
+            Console.WriteLine("ORDER ID\tCustomer ID\tDate\tComment");
+            foreach (var order in _orderDAL.GetAllOrders(ShipperIDKEY))
+            {
+                Console.WriteLine($"{order.OrderID}\t{order.CustomerIDKEY}\t{order.Date}\t{order.Comment}");
+
+            }
+        }
+
+        public void ShowOrdersSorted(int SortParameter, int ShipperIDKEY)
+        {
+            
+            Console.WriteLine("ORDER ID\tCustomer ID\tDate\tComment");
+            foreach (var order in _orderDAL.GetAllOrders(ShipperIDKEY))
+            {
+                Console.WriteLine($"{order.OrderID}\t{order.CustomerIDKEY}\t{order.Date}\t{order.Comment}");
+
+            }
         }
     }
 }
