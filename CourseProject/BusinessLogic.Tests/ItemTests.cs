@@ -21,8 +21,7 @@ namespace BusinessLogic.Tests
         {
 
 
-       
-
+     
         [Test]
         public void AddItemTest()
         {
@@ -75,7 +74,7 @@ namespace BusinessLogic.Tests
             ItemDAL dal = new ItemDAL(ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString);
             Item result = new Item(dal);
             result.RemoveItem(33);
-            Assert.IsTrue(result.GetItem(33).ItemID!= 33, "Item was not deleted");
+            Assert.IsTrue(result.GetItem(33).ItemID != 33, "Item was not deleted");
         }
     }
 }
