@@ -1,4 +1,5 @@
-﻿using DAL.Interfaces;
+﻿using ConsoleProject;
+using DAL.Interfaces;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -52,7 +53,37 @@ namespace DAL.Concrete
         }
 
 
-    
+        public ShipperDTO GetShipperByLogin(string ShipperLogin)
+        {
+
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                conn.Open();
+                ShipperDTO shipper = new ShipperDTO();
+
+                comm.CommandText = $"select * from Shipper where Login=@Login";
+                comm.Parameters.AddWithValue("@Login", ShipperLogin);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    shipper = new ShipperDTO
+                    {
+                        ShipperID = Convert.ToInt32(reader["ShipperID"]),
+                        Login = reader["Login"].ToString(),
+                        Password = (byte[])(reader["Password"]),
+                        EMail = reader["EMail"].ToString(),
+                        Addres = reader["Adress"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Description = reader["Description"].ToString(),
+                    };
+                }
+
+                return shipper;
+            }
+        }
 
 
         public ShipperDTO CreateShipper(ShipperDTO shipper)
@@ -101,6 +132,44 @@ namespace DAL.Concrete
 
 
         }
+
+        public bool Login(string Password, string Login)
+        {
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                conn.Open();
+                ShipperDTO shipper = new ShipperDTO();
+
+                comm.CommandText = $"select * from Shipper where Login=@Login";
+                comm.Parameters.AddWithValue("@Login", Login);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    shipper = new ShipperDTO
+                    {
+                        ShipperID = Convert.ToInt32(reader["ShipperID"]),
+                        Login = reader["Login"].ToString(),
+                        Password = (byte[])(reader["Password"]),
+                        EMail = reader["EMail"].ToString(),
+                        Addres = reader["Adress"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Description = reader["Description"].ToString(),
+                    };
+                    if (new PasswordActions().PasswordDecryption(shipper.Password) == Password)
+                    {
+                        return true;
+                    }
+                }
+
+              
+            }
+            return false;
+        }
+
+
 
 
         public void DeleteShipper(int ShipperID)

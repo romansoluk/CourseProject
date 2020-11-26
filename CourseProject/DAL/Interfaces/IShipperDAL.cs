@@ -12,8 +12,10 @@ namespace DAL.Interfaces
        
         ShipperDTO CreateShipper(ShipperDTO shipper);
         ShipperDTO GetShipperById(int ShipperID);
+        ShipperDTO GetShipperByLogin(string ShipperLogin);
         ShipperDTO UpdateShipper(ShipperDTO shipper);
         void DeleteShipper(int ShipperID);
+        bool Login(string password, string Login);
 
     }
 }

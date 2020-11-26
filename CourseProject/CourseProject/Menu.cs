@@ -27,7 +27,7 @@ namespace CourseProject
 
         
 
-        public void MENU(int user)
+        /*public void MENU(int user)
         {
             string conn = ConfigurationManager.ConnectionStrings["Shipper"].ConnectionString;
             ConsoleProgramFunctions Login = new ConsoleProgramFunctions(connectionString);
@@ -203,7 +203,7 @@ namespace CourseProject
            
 
 
-        }
+        }*/
 
     }
 }

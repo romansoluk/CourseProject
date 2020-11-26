@@ -1,4 +1,5 @@
-﻿using DAL.Interfaces;
+﻿using ConsoleProject;
+using DAL.Interfaces;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,36 @@ namespace DAL.Concrete
 
                 comm.CommandText = $"select * from Customer where CustomerID=@CustomerID";
                 comm.Parameters.AddWithValue("@CustomerID", CustomerID);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    customer = new CustomerDTO
+                    {
+                        CustomerID = Convert.ToInt32(reader["CustomerID"]),
+                        EMail = reader["EMail"].ToString(),
+                        Addres = reader["Adress"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Description = reader["Description"].ToString(),
+                    };
+                }
+
+                return customer;
+            }
+        }
+
+
+        public CustomerDTO GetCustomerByLogin(string EMail)
+        {
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                conn.Open();
+                CustomerDTO customer = new CustomerDTO();
+
+                comm.CommandText = $"select * from Customer where EMail=@EMail";
+                comm.Parameters.AddWithValue("@EMail", EMail);
                 SqlDataReader reader = comm.ExecuteReader();
 
                 while (reader.Read())
@@ -109,6 +140,40 @@ namespace DAL.Concrete
             }
         }
 
+
+        public bool Login(string Password, string Login)
+        {
+            using (SqlConnection conn = new SqlConnection(this.connectionString))
+            using (SqlCommand comm = conn.CreateCommand())
+            {
+                conn.Open();
+                CustomerDTO shipper = new CustomerDTO();
+
+                comm.CommandText = $"select * from Customer where Email=@Login";
+                comm.Parameters.AddWithValue("@Login", Login);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    shipper = new CustomerDTO
+                    {
+                        CustomerID = Convert.ToInt32(reader["CustomerID"]),
+                        EMail = reader["EMail"].ToString(),
+                        Addres = reader["Adress"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Description = reader["Description"].ToString(),
+                    };
+                    if (shipper.Phone == Password)
+                    {
+                        return true;
+                    }
+                }
+
+
+            }
+            return false;
+        }
 
     }
 }
